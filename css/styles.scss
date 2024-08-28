@@ -1,0 +1,633 @@
+// $primaryColor: rgb(245, 122, 27);
+$primaryColor: rgb(245, 122, 27);
+$secondaryColor: #ED1C24;
+
+body {
+  font-family: "Open Sans", sans-serif;
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 14px;
+  text-align: left;
+  line-height: 1.4;
+  }
+
+  @media (min-width: 1200px) {
+  .container { max-width: 960px; }}
+  
+  input,
+  select,
+  textarea {
+    -moz-appearance: none;
+    /* Firefox */
+    -webkit-appearance: none;
+    /* Safari and Chrome */
+    appearance: none;
+  }
+
+  ul {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+}
+
+img {
+  -webkit-user-select: none; /* Safari */
+  -ms-user-select: none; /* IE 10 and IE 11 */
+  user-select: none; /* Standard syntax */
+}
+
+.engine-technology {
+  width: 150px;
+  height: 150px;
+}
+
+/* Button */
+.btn {
+  position: relative;
+  overflow: hidden;
+}
+
+.btn:after {
+  background: #fff;
+  content: "";
+  height: 155px;
+  width: 50px;
+  left: -75px;
+  opacity: .2;
+  position: absolute;
+  top: -50px;
+  -webkit-transform: rotate(35deg);
+  transform: rotate(35deg);
+  -webkit-transition: all .8s cubic-bezier(.19, 1, .22, 1);
+  transition: all .8s cubic-bezier(.19, 1, .22, 1);
+  z-index: 1
+}
+
+.btn:hover:after {
+  left: 120%;
+  -webkit-transition: all .8s cubic-bezier(.19, 1, .22, 1);
+  transition: all .8s cubic-bezier(.19, 1, .22, 1);
+}
+  
+  /* Scroll Custom */
+  ::-webkit-scrollbar {
+    width: 5px;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: rgba(0, 0, 0, 0.05);
+    border-radius: 2px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: hsla(0, 0%, 100%, 0);
+  }
+
+  .primary-color {
+    color: $primaryColor;
+  }
+
+  .logo {
+    display: block;
+    width: 90px;
+    height: auto;
+  }
+
+  .branding a > img {
+    width: 600px;
+    position: absolute;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    height: 170px;
+    top: 0;
+  }
+
+  .page-title {
+    font-family: "Montserrat", sans-serif;
+    color: #fff;
+    max-width: 900px;
+    font-size: 60px;
+    line-height: 1;
+  }
+
+  .text-headline {
+    font-family: "Montserrat", sans-serif;    
+    font-size: 24px;
+    text-align: left;
+    line-height: 1.2;
+    @extend .primary-color;
+  }
+
+  .text-des-headline {
+    font-family: "Open Sans", sans-serif;
+    color: rgb(255, 255, 255);
+    font-size: 16px;
+    line-height: 1.2;
+  }
+  
+  .page-section {
+    padding-top: 55px;
+    padding-bottom: 55px;
+  }
+
+  .gray-bg-section {
+    background-color: rgb(34, 34, 34);
+  }
+
+  .black-bg-section {
+    background-color: rgb(0, 0, 0);
+  }
+
+  .section-title-wrapper {
+    position: relative;
+    margin-bottom: 60px;
+
+    .title {
+      font-family: "Open Sans", sans-serif;
+      color: $primaryColor;
+      font-size: 16px;
+      text-align: center;
+      line-height: 1.2;
+    }
+
+    .hightlight-title {
+      font-family: "Montserrat", sans-serif;
+      color: rgb(255, 255, 255);
+      font-size: 30px;
+      text-align: center;
+      line-height: 1;
+      text-transform: uppercase;
+      &.text-black {
+        color: black;
+      }
+    }
+
+    &::after {
+      position: absolute;
+      content: '';
+      height: 1px;
+      width: 85px;
+      bottom: -22px;
+      background-color: $primaryColor;
+      margin: auto;
+      left: 0;
+      right: 0;
+    }
+  }
+
+  // banner section
+  .banner {
+    margin: 0 auto;
+    position: relative;
+    height: 800px;
+
+    > .container {
+      position: relative;
+      z-index: 11;
+    }
+
+    &::after {
+      position: absolute;
+      top: 0;
+      left: 0;
+      content: '';
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.3);
+    }
+
+    .navbar-custom {
+      padding-top: 15px;
+      padding-left: 0;
+      padding-right: 0;
+    }
+
+    .hotline {
+      font-family: "Open Sans", sans-serif;
+      color: rgb(255, 255, 255);
+      font-size: 16px;
+      text-align: right;
+      letter-spacing: 0px;
+      line-height: 1.2;
+      padding-right: 0 !important;
+      position: relative;
+      display: block;
+
+      &::after {
+        position: absolute;
+        content: '';
+        width: 33px;
+        height: 2px;
+        background-color: #fff;
+        top: 50px;
+        right: 0;
+      }
+    }
+
+    .section-background {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        pointer-events: none;
+        overflow: hidden;
+        background-size: cover;
+        background-attachment: scroll;
+        background-origin: content-box;
+        background-image: url('../images/home-banner.jpg');
+        background-position: center top;
+        background-repeat: no-repeat;
+    }
+
+    .content {
+      position: relative;
+      padding-top: calc(4% + 110px);
+
+      .content-des {
+        max-width: 600px;
+        font-family: "Montserrat", sans-serif;
+        color: rgb(255, 255, 255);
+        font-size: 20px;
+        text-align: left;
+        line-height: 1.4;
+        width: 100%;
+        display: inline-block;
+        word-break: break-word;
+        > div:first-child {
+          padding: 5px 10px;
+          border: 2px solid $primaryColor;
+          background-color: white;
+          color: black;
+          font-weight: 500;
+        }
+        > div:last-child {
+          padding: 5px 10px;
+          background-color: $primaryColor;
+          font-weight: 500;
+          line-height: 1.6;
+        }
+      }
+
+      .ladi-button-headline {
+        width: 182px;
+        height: 50px;
+        margin-top: 20px;
+        display: table;
+        user-select: none;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        background-color: $primaryColor;
+        border-radius: 5px;
+        cursor: pointer;
+        > p {
+          color: rgb(255, 255, 255);
+          font-size: 14px;
+          font-weight: bold;
+          text-align: center;
+          line-height: 2;
+          display: table-cell;
+          vertical-align: middle;
+        }
+      }
+    }
+  }
+
+  // feature products
+
+.feature-products {
+  .table-bordered {
+    margin: auto;
+    &, th, td {
+      padding: 3px;
+    }
+     th {
+      background-color: #C0D730;
+      text-transform: uppercase;
+    }
+  }
+  .custom-card {
+    position: relative;
+    margin-bottom: 5px;
+    width: 317px;
+    color: black;
+    font-size: 12px;
+    text-align: center;
+    // max-height: 270px;
+    // overflow: hidden;
+
+    .content {
+      background-color: $primaryColor;
+      width: 85%;
+      margin: auto;
+      padding: 10px;
+      text-align: center;
+      border-radius: 5px;
+      margin-top: 8px;
+
+      .card-headline > h3 {
+        font-family: "Open Sans", sans-serif;
+        color: rgb(255, 255, 255);
+        font-size: 24px;
+        font-weight: bold;
+        font-style: italic;
+        line-height: 1.2;
+      }
+    }
+  }
+
+  .custom-card:not(:last-child) {
+    margin-right: 5px;
+  }
+}
+
+// provided-products
+
+.provided-products {
+  .intro-text {
+    font-family: "Open Sans", sans-serif;
+    color: $primaryColor;
+    font-size: 18px;
+    text-align: center;
+    line-height: 1.2;
+  }
+}
+
+// latest-products
+
+.latest-products {
+  .item > img {
+    width: 180px;
+  }
+  .content-wrapper {
+    margin-left: 15px;
+
+    > div {
+      background-color: $secondaryColor;
+      padding: 5px 8px;
+      margin-bottom: 5px;
+      border-radius: 5px;
+      text-transform: capitalize;
+      font-size: 20px;
+      font-style: italic;
+      font-weight: bold;
+    }
+    > p {
+      font-size: 18px;
+    }
+  }
+}
+
+// services
+
+.services {
+  background: url('../images/services/feature-background.jpg') no-repeat right 100px center / 690px 473px, rgb(34, 34, 34);
+
+  .blur-bg {
+    background: rgba(53, 53, 53, 0.7);
+    padding-top: 20px;
+  }
+
+  .service-item {
+    padding-bottom: 15px;
+
+    > svg {
+      width: 50px;
+      height: 50px;
+    }
+
+    > h4 {
+      font-family: "Open Sans", sans-serif;
+      color: rgb(255, 255, 255);
+      font-size: 16px;
+      font-weight: bold;
+      text-transform: uppercase;
+      text-align: left;
+      line-height: 1.2;
+      margin-top: 10px;
+     }
+
+     > p {
+      text-align: justify;
+     }
+  }
+}
+
+// news 
+
+.news {
+  .news-wrapper {
+    .news-post {
+      align-items: center;
+      justify-content: center;
+
+      &:not(:last-child) {
+        margin-bottom: 30px;
+      }
+
+      img {
+        width: 78px;
+        height: 81px;
+        margin-right: 18px;
+      }
+
+      .content-group {
+        .title {
+          font-family: "Open Sans", sans-serif;
+          color: rgb(255, 255, 255);
+          font-size: 18px;
+          text-align: left;
+          line-height: 1.2;
+          margin-bottom: 8px;
+        }
+      }
+    }
+  }
+}
+
+// application
+.application {
+  .custom-card {
+    text-align: center;
+  }
+  .custom-card > img {
+    width: 210px;
+    height: 210px;
+    border: 2px solid $primaryColor;
+    padding: 2px;
+    border-radius: 50%;
+  }
+  .custom-card .card-title {
+    font-family: "Open Sans", sans-serif;
+    color: $primaryColor;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 1.2;
+    margin-top: 10px;
+  }
+}
+
+
+// footer & copyright
+
+footer {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  border-top: 1px solid rgba(245, 122, 27, 0.3);
+
+  h5 {
+    color: $primaryColor;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: left;
+    letter-spacing: 0px;
+    line-height: 1.2;    
+  }
+
+  .logo, h5 {
+    margin-bottom: 25px;
+  }
+
+  .certificates {
+    li:not(:last-child) {
+      margin-right: 10px;
+    }
+
+    img {
+      width: 85px;
+      height: 83px;
+      display: inline-block;
+    }
+  }
+}
+
+.copy-right {
+  background-color: $primaryColor;
+  padding: 15px;
+  
+  > h5 {
+    font-family: "Open Sans", sans-serif;
+    color: rgb(28, 28, 28);
+    font-size: 13px;
+    text-align: center;
+    line-height: 1.4;
+  }
+}
+
+.scrollToTop {
+  cursor: pointer;
+  padding: 10px;
+  font-weight: 700;
+  position: fixed;
+  right: 40px;
+  z-index: 100;
+  -webkit-transition: all .6s ease;
+  transition: all .6s ease;
+  visibility: hidden;
+  bottom: 50px;
+  opacity: 0;
+  visibility: hidden;
+
+  &.show {
+    bottom: 50px;
+    opacity: 1;
+    visibility: visible;
+  }
+  > img {
+    background-color: $primaryColor;
+    border-radius: 50%;
+    padding: 10px;
+    opacity: .8;
+  }
+}
+
+
+// transitions and effects
+
+/* [1] The container */
+.img-hover-zoom {
+  height: 300px; /* [1.1] Set it as per your need */
+  overflow: hidden; /* [1.2] Hide the overflowing of child elements */
+}
+
+/* [2] Transition property for smooth transformation of images */
+.img-hover-zoom img {
+  transition: transform .5s ease;
+}
+
+/* [3] Finally, transforming the image when container gets hovered */
+.img-hover-zoom:hover img {
+  transform: scale(1.3);
+}
+
+.popover-wrapper {
+  position: relative;
+  margin-top: 1.5rem;
+  display: inline-block;
+  cursor: pointer;
+}
+.popover-content {
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+  left: calc(-1 * (50% - 100px));
+  top: 50%;
+  transform: translate(0, 10px);
+  background-color: white;
+  padding: 10px;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+  width: 150%;
+  border-radius: 10px;
+}
+.popover-content:before {
+  position: absolute;
+  z-index: -1;
+  content: "";
+  right: calc(50% - 10px);
+  top: -8px;
+  border-style: solid;
+  border-width: 0 10px 10px 10px;
+  border-color: transparent transparent white transparent;
+  // box-shadow: -1px -1px 10px -2px rgba(0, 0, 0, 0.5);
+  transition-duration: 0.3s;
+  transition-property: transform;
+}
+
+@media screen and (min-width: 577px) {
+  .popover-wrapper:hover .popover-content {
+    z-index: 10;
+    opacity: 1;
+    visibility: visible;
+    transform: translate(0, -20px);
+    transition: all 0.5s cubic-bezier(0.75, -0.02, 0.2, 0.97);
+  }
+}
+
+
+// responsive
+
+@media screen and (max-width: 576px){
+  .page-title {
+    font-size: 25px;
+  }
+  .banner .content .content-des { font-size: 16px; }
+  .section-title-wrapper .hightlight-title { font-size: 20px;}
+  .feature-products {
+    .custom-card {
+      width: 100%;
+    }
+  }
+
+  .popover-content {
+    position: relative;
+    top: 0;
+    left: 0;
+    opacity: 1;
+    visibility: visible;
+    width: 100%;
+    transform: unset;
+    box-shadow: none;
+  }
+}
